@@ -1,4 +1,4 @@
--- sigma.mundoff | Painel rolável com TikTok, 13 scripts e controles de janela.
+-- sigma.mundoff | Painel rolável com TikTok, 18 scripts e controles de janela.
 -- Cole o conteúdo deste arquivo em um host raw, ou use o carregador curto publicado.
 -- Requer um executor que suporte loadstring e game:HttpGet.
 -- A imagem personalizada requer writefile e getcustomasset/getsynasset;
@@ -16,11 +16,18 @@ local SCRIPTS = {
     { name = "FN Hub", url = "https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/Fn-stealanegg.lua" },
     { name = "Sena Hub", url = "https://senahub.xyz/raw/loader" },
     { name = "CiaoHUB", url = "https://pastefy.app/YoZocJ8O/raw" },
-    { name = "CloverHub", url = "https://cloverhub.app/clover.lua" },
-    { name = "Speed Hub X", url = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", noCache = true },
     { name = "TP para a zona segura", url = "https://pastefy.app/ieFgeDlU/raw" },
     { name = "DracoswScript", url = "https://raw.githubusercontent.com/black018202/StealanEGGDRACOSW/refs/heads/main/StealanEggDracoswor" },
     { name = "bee hub", url = "https://flowauth.net/v1/loaders/026c52c6ec62cd086277f45a113a680a.lua" },
+    -- Estes sete foram anunciados como sem chave pela página fornecida.
+    -- Alguns usam loaders ofuscados: a ausência de chave não foi confirmada no Roblox.
+    { name = "ZEROIN HUB", url = "https://zeroinhub.com/api/script" },
+    { name = "OXIDE HUB", url = "https://pastefy.app/aIzaPmW9/raw" },
+    { name = "UB HUB", url = "https://raw.githubusercontent.com/TeamUBHub/UBLoader/refs/heads/main/Loader.lua" },
+    { name = "BLYXO HUB", url = "https://flowauth.net/v1/loaders/69d3463240384f3a73fbe32c178093a2.lua" },
+    { name = "BK HUB", url = "https://api.luarmor.net/files/v4/loaders/9ee4edde227ac85f50872bf9e4226508.lua" },
+    { name = "NEVA HUB", url = "https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2" },
+    { name = "CLOUT HUB", url = "https://raw.githubusercontent.com/ClouthubOnTop/Loader/main/main.lua" },
 }
 
 local Players = game:GetService("Players")
