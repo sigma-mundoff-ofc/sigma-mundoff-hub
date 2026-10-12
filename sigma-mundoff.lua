@@ -1,4 +1,4 @@
--- sigma.mundoff | Painel rolável com TikTok, 18 scripts e controles de janela.
+-- sigma.mundoff | Painel rolável com TikTok, 19 scripts e controles de janela.
 -- Cole o conteúdo deste arquivo em um host raw, ou use o carregador curto publicado.
 -- Requer um executor que suporte loadstring e game:HttpGet.
 -- A imagem personalizada requer writefile e getcustomasset/getsynasset;
@@ -28,6 +28,8 @@ local SCRIPTS = {
     { name = "BK HUB", url = "https://api.luarmor.net/files/v4/loaders/9ee4edde227ac85f50872bf9e4226508.lua" },
     { name = "NEVA HUB", url = "https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2" },
     { name = "CLOUT HUB", url = "https://raw.githubusercontent.com/ClouthubOnTop/Loader/main/main.lua" },
+    -- Alfa Hub tem acesso próprio por chave; as funções não ficam neste repositório público.
+    { name = "Alfa Hub", url = "https://raw.githubusercontent.com/sigma-mundoff-ofc/sigma-mundoff-hub/main/alfa-hub.lua", noCache = true, requiresKey = true },
 }
 
 local Players = game:GetService("Players")
@@ -322,7 +324,8 @@ for index, entry in ipairs(SCRIPTS) do
             if not alive or requestId ~= thisRequest then return end
             if ok then
                 status.TextColor3 = Color3.fromRGB(139, 220, 156)
-                status.Text = "Iniciado: " .. entry.name
+                status.Text = entry.requiresKey and (entry.name .. " — abrindo acesso por chave.")
+                    or ("Iniciado: " .. entry.name)
                 task.spawn(function()
                     local ran, runError = pcall(compiledOrError)
                     if not ran then

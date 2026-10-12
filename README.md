@@ -1,6 +1,6 @@
 # sigma.mundoff
 
-Painel Roblox/Luau com **18 botões independentes** em uma lista rolável, ícone flutuante, controles de janela e atalho para o TikTok @sigma.mundoff. O nome exibido continua **sigma.mundoff**.
+Painel Roblox/Luau com **19 botões independentes** em uma lista rolável, ícone flutuante, controles de janela e atalho para o TikTok @sigma.mundoff. O nome exibido continua **sigma.mundoff**.
 
 ## Linha para o Delta
 
@@ -9,6 +9,22 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/sigma-mundoff-ofc/sig
 ```
 
 Essa linha permanece a mesma após atualizações do arquivo `sigma-mundoff.lua` no ramo `main` do repositório público. Execute a linha novamente para buscar alterações; uma interface já aberta não muda sozinha. O cache do GitHub ou do executor pode atrasar a chegada da nova versão.
+
+## Alfa Hub — acesso por chave
+
+O último botão, **Alfa Hub**, abre sua tela de chave. Os 18 botões anteriores continuam independentes e na mesma ordem. O acesso por chave é do Alfa Hub, não bloqueia toda a executora.
+
+Fluxo: comando da executora → botão Alfa Hub → carregador público `alfa-hub.lua` → validação no site → funções autorizadas. No Alfa, com esteira ligada e pets marcados no monitor, a coleta busca o ovo, entrega e retoma o treino. Desmarcar um pet evita novas coletas, sem cancelar a entrega já iniciada.
+
+O proprietário administra chaves em seu [painel de acesso](https://alfakeys-vdt6rziw.manus.space/). Cada chave inicia sua validade no primeiro uso e fica vinculada à primeira conta Roblox no fluxo normal. O comprador não precisa de acesso administrativo ao site: recebe a chave e informa no Alfa Hub.
+
+Para abrir o Alfa diretamente, sem a lista da executora:
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sigma-mundoff-ofc/sigma-mundoff-hub/main/alfa-hub.lua", true))()
+```
+
+O código completo fica no servidor protegido, **não neste repositório público**. Atualizações das funções publicadas no mesmo site não exigem trocar o comando; abra o Alfa novamente para buscar a nova versão. O executor precisa oferecer `request`, `http_request` ou função equivalente para validar a chave. A proteção não é absoluta: um cliente modificado pode copiar código já recebido ou falsificar o UserId informado. Comandos temporários de teste anteriores continuam sem esse bloqueio.
 
 ## Mudanças desta atualização
 
